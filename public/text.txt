@@ -9,3 +9,9 @@ git push origin main
 
 # 4. Опубликуйте обновлённую версию сайта
 npm run deploy
+
+
+
+# Консоль браузера
+const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+console.table(submissions);
