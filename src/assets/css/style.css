@@ -1508,4 +1508,15 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
   .home-team h4 {
     font-size: 28px;
   }
+}
+.form-error {
+  padding: 14px 16px;
+  background-color: #FEE2E2;
+  color: #991B1B;
+  border: 1px solid #FCA5A5;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
