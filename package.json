@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "diplomapp",
   "homepage": "https://karizass.github.io/zhilfond-sterlitamak",
   "version": "0.1.0",
