@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/zhilfond-sterlitamak/static/css/main.7e77529f.css",
-    "main.js": "/zhilfond-sterlitamak/static/js/main.f2399ed0.js",
+    "main.js": "/zhilfond-sterlitamak/static/js/main.8f9deae0.js",
     "static/media/team-employee4.webp": "/zhilfond-sterlitamak/static/media/team-employee4.f73d136a059b41e2bc2f.webp",
     "static/media/team-employee3.webp": "/zhilfond-sterlitamak/static/media/team-employee3.f1f0ffb8093499c15290.webp",
     "static/media/team-employee1.webp": "/zhilfond-sterlitamak/static/media/team-employee1.16d5f6c05994c3454df3.webp",
@@ -43,10 +43,10 @@
     "static/media/burger-icon.webp": "/zhilfond-sterlitamak/static/media/burger-icon.a5bab42b310f96be4f46.webp",
     "static/media/banner-button-arrow.webp": "/zhilfond-sterlitamak/static/media/banner-button-arrow.3734da10aa76032299f4.webp",
     "main.7e77529f.css.map": "/zhilfond-sterlitamak/static/css/main.7e77529f.css.map",
-    "main.f2399ed0.js.map": "/zhilfond-sterlitamak/static/js/main.f2399ed0.js.map"
+    "main.8f9deae0.js.map": "/zhilfond-sterlitamak/static/js/main.8f9deae0.js.map"
   },
   "entrypoints": [
     "static/css/main.7e77529f.css",
-    "static/js/main.f2399ed0.js"
+    "static/js/main.8f9deae0.js"
   ]
 }
