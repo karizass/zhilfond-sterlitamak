@@ -1,14 +1,16 @@
 {
   "files": {
     "main.css": "/zhilfond-sterlitamak/static/css/main.7e77529f.css",
-    "main.js": "/zhilfond-sterlitamak/static/js/main.2259053c.js",
+    "main.js": "/zhilfond-sterlitamak/static/js/main.4e409c8d.js",
+    "static/media/team-employee3.webp": "/zhilfond-sterlitamak/static/media/team-employee3.f1f0ffb8093499c15290.webp",
+    "static/media/team-employee1.webp": "/zhilfond-sterlitamak/static/media/team-employee1.16d5f6c05994c3454df3.webp",
     "static/media/home-realestate-box-1.webp": "/zhilfond-sterlitamak/static/media/home-realestate-box-1.cd3db72a4050f1abf246.webp",
     "static/media/home-realestate-box-2.webp": "/zhilfond-sterlitamak/static/media/home-realestate-box-2.2f7fff5fbba9c208a28b.webp",
     "static/media/home-realestate-box-4.webp": "/zhilfond-sterlitamak/static/media/home-realestate-box-4.3909f90a695b8ecd991b.webp",
+    "static/media/team-employee2.webp": "/zhilfond-sterlitamak/static/media/team-employee2.8b95ce7b7b78299403cd.webp",
     "static/media/home-realestate-box-3.webp": "/zhilfond-sterlitamak/static/media/home-realestate-box-3.950d8ea399d3d41468de.webp",
     "static/media/home-banner-image.webp": "/zhilfond-sterlitamak/static/media/home-banner-image.2bba5769c2e80a7d769a.webp",
     "static/media/home-deal-image.webp": "/zhilfond-sterlitamak/static/media/home-deal-image.8023d8912fe9eec156df.webp",
-    "static/media/team-employe-1.webp": "/zhilfond-sterlitamak/static/media/team-employe-1.0d976c531eeca99efb5a.webp",
     "static/media/footer-logo-icon.webp": "/zhilfond-sterlitamak/static/media/footer-logo-icon.720f9ce5da2471975863.webp",
     "static/media/header-logo-icon.webp": "/zhilfond-sterlitamak/static/media/header-logo-icon.8099847d117d9b35d261.webp",
     "static/media/team-page-email-icon.webp": "/zhilfond-sterlitamak/static/media/team-page-email-icon.5d18a0347fec5628f961.webp",
@@ -40,10 +42,10 @@
     "static/media/burger-icon.webp": "/zhilfond-sterlitamak/static/media/burger-icon.a5bab42b310f96be4f46.webp",
     "static/media/banner-button-arrow.webp": "/zhilfond-sterlitamak/static/media/banner-button-arrow.3734da10aa76032299f4.webp",
     "main.7e77529f.css.map": "/zhilfond-sterlitamak/static/css/main.7e77529f.css.map",
-    "main.2259053c.js.map": "/zhilfond-sterlitamak/static/js/main.2259053c.js.map"
+    "main.4e409c8d.js.map": "/zhilfond-sterlitamak/static/js/main.4e409c8d.js.map"
   },
   "entrypoints": [
     "static/css/main.7e77529f.css",
-    "static/js/main.2259053c.js"
+    "static/js/main.4e409c8d.js"
   ]
 }
