@@ -10,7 +10,7 @@ import "./assets/scss/style.scss";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/zhilfond-sterlitamak">
       <div className="App">
         <Header />
         <Routes>
