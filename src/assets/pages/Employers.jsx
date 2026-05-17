@@ -27,7 +27,7 @@ function Employers() {
       position: "Риелтор",
       experience: "4 года опыта",
     //   specialization: "Жилая недвижимость",
-      description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами в новостройках и на вторичном рынке.",
+      description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами и жилыми домами.",
       phone: "+7 (937) 162-59-83",
       email: "gale_09@mail.ru",
       image: employee2
@@ -36,9 +36,9 @@ function Employers() {
       id: 3,
       name: "Каримова Элиза",
       position: "Риелтор",
-      experience: "3 лет опыта",
+      experience: "3 года опыта",
     //   specialization: "Жилая недвижимость",
-      description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами в новостройках и на вторичном рынке.",
+      description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами и жилыми домами.",
       phone: "+7 (903) 312-44-09",
       email: "gale_09@mail.ru",
       image: employee3
@@ -70,10 +70,10 @@ function Employers() {
                                 <span className="employee-info-label">Опыт:</span>
                                 <span className="employee-info-value">{employee.experience}</span>
                             </div>
-                            <div className="employee-info-row">
+                            {/* <div className="employee-info-row">
                                 <span className="employee-info-label">Специализация:</span>
                                 <span className="employee-info-value">{employee.specialization}</span>
-                            </div>
+                            </div> */}
                         </div>
 
                         <p className="employee-description">{employee.description}</p>
@@ -96,7 +96,7 @@ function Employers() {
         <div className="employers-cta">
             <h6>Не нашли подходящего специалиста?</h6>
             <p className="p-description">Свяжитесь с нами, и мы подберём риелтора под ваши конкретные потребности</p>
-            <a href="tel:+73473000000" className="btn-dark">
+            <a href="tel:+79177308313" className="btn-dark">
                 <img src={phoneIcon} alt="phone" />
                 Позвонить нам
             </a>
