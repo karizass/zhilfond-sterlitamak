@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./assets/components/Header";
 import Footer from "./assets/components/Footer";
 import Home from "./assets/pages/Home";
@@ -10,7 +10,7 @@ import "./assets/scss/style.scss";
 
 function App() {
   return (
-    <Router basename="/zhilfond-sterlitamak">
+    <Router>
       <div className="App">
         <Header />
         <Routes>
