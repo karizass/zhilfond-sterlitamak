@@ -4,6 +4,7 @@ import '../scss/style.scss';
 import employee1 from '../img/team-employee1.webp';
 import employee2 from '../img/team-employee2.webp';
 import employee3 from '../img/team-employee3.webp';
+import employee4 from '../img/team-employee4.webp';
 import phoneIcon from '../img/team-page-phone-icon.webp';
 import emailIcon from '../img/team-page-email-icon.webp';
 import contactIcon from '../img/team-phone-icon.webp';
@@ -14,7 +15,7 @@ function Employers() {
       id: 1,
       name: "Юмагулова Гузель",
       position: "Директор",
-      experience: "5 лет опыта",
+      experience: "5 лет на рынке",
     //   specialization: "Жилая недвижимость",
       description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами в новостройках и на вторичном рынке.",
       phone: "+7 (905) 005-28-82",
@@ -25,23 +26,34 @@ function Employers() {
       id: 2,
       name: "Шарипова Айгуль",
       position: "Риелтор",
-      experience: "4 года опыта",
+      experience: "4 года на рынке",
     //   specialization: "Жилая недвижимость",
       description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами и жилыми домами.",
       phone: "+7 (937) 162-59-83",
-      email: "gale_09@mail.ru",
+      email: "sharipova1212@icloud.com",
       image: employee2
     },
     {
       id: 3,
       name: "Каримова Элиза",
       position: "Риелтор",
-      experience: "3 года опыта",
+      experience: "3 года на рынке",
     //   specialization: "Жилая недвижимость",
       description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами и жилыми домами.",
       phone: "+7 (903) 312-44-09",
-      email: "gale_09@mail.ru",
+      email: "Eliza-karimova@mail.ru",
       image: employee3
+    },
+    {
+      id: 4,
+      name: "Даутов Рустам",
+      position: "Застройщик",
+      experience: "3 года на рынке",
+    //   specialization: "Жилая недвижимость",
+      description: "Партнерская строительная компания, специализирующаяся на жилых домах из СИП-панелей.",
+      phone: "+7 (917) 377-78-50",
+      email: "sip_home2@yandex.ru",
+      image: employee4
     }
   ];
 
