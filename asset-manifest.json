@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/zhilfond-sterlitamak/static/css/main.7e77529f.css",
-    "main.js": "/zhilfond-sterlitamak/static/js/main.09968e4a.js",
+    "main.js": "/zhilfond-sterlitamak/static/js/main.2259053c.js",
     "static/media/home-realestate-box-1.webp": "/zhilfond-sterlitamak/static/media/home-realestate-box-1.cd3db72a4050f1abf246.webp",
     "static/media/home-realestate-box-2.webp": "/zhilfond-sterlitamak/static/media/home-realestate-box-2.2f7fff5fbba9c208a28b.webp",
     "static/media/home-realestate-box-4.webp": "/zhilfond-sterlitamak/static/media/home-realestate-box-4.3909f90a695b8ecd991b.webp",
@@ -40,10 +40,10 @@
     "static/media/burger-icon.webp": "/zhilfond-sterlitamak/static/media/burger-icon.a5bab42b310f96be4f46.webp",
     "static/media/banner-button-arrow.webp": "/zhilfond-sterlitamak/static/media/banner-button-arrow.3734da10aa76032299f4.webp",
     "main.7e77529f.css.map": "/zhilfond-sterlitamak/static/css/main.7e77529f.css.map",
-    "main.09968e4a.js.map": "/zhilfond-sterlitamak/static/js/main.09968e4a.js.map"
+    "main.2259053c.js.map": "/zhilfond-sterlitamak/static/js/main.2259053c.js.map"
   },
   "entrypoints": [
     "static/css/main.7e77529f.css",
-    "static/js/main.09968e4a.js"
+    "static/js/main.2259053c.js"
   ]
 }
