@@ -1,7 +1,9 @@
 import React from "react";
 import '../scss/style.scss';
 
-import employee1 from '../img/team-employe-1.webp';
+import employee1 from '../img/team-employe1.webp';
+import employee2 from '../img/team-employe2.webp';
+import employee3 from '../img/team-employe3.webp';
 import phoneIcon from '../img/team-page-phone-icon.webp';
 import emailIcon from '../img/team-page-email-icon.webp';
 import contactIcon from '../img/team-phone-icon.webp';
@@ -10,47 +12,36 @@ function Employers() {
   const employees = [
     {
       id: 1,
-      name: "Елена Волкова",
-      position: "Ведущий риелтор",
-      experience: "12 лет опыта",
-      specialization: "Жилая недвижимость",
-      description: "Специализируется на жилой недвижимости, работает с квартирами в новостройках и на вторичном рынке.",
-      phone: "+7 (917) 123-45-67",
-      email: "volkova@zhilfond-str.ru",
+      name: "Юмагулова Гузель",
+      position: "Директор",
+      experience: "5 лет опыта",
+    //   specialization: "Жилая недвижимость",
+      description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами в новостройках и на вторичном рынке.",
+      phone: "+7 (905) 005-28-82",
+      email: "gale_09@mail.ru",
       image: employee1
     },
     {
       id: 2,
-      name: "Дмитрий Смирнов",
-      position: "Старший риелтор",
-      experience: "10 лет опыта",
-      specialization: "Коммерческая недвижимость",
-      description: "Эксперт в коммерческой недвижимости, помогает подобрать офисные и торговые площади.",
-      phone: "+7 (917) 234-56-78",
-      email: "smirnov@zhilfond-str.ru",
-      image: employee1
+      name: "Шарипова Айгуль",
+      position: "Риелтор",
+      experience: "4 года опыта",
+    //   specialization: "Жилая недвижимость",
+      description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами в новостройках и на вторичном рынке.",
+      phone: "+7 (937) 162-59-83",
+      email: "gale_09@mail.ru",
+      image: employee2
     },
     {
       id: 3,
-      name: "Анна Петрова",
+      name: "Каримова Элиза",
       position: "Риелтор",
-      experience: "7 лет опыта",
-      specialization: "Загородная недвижимость",
-      description: "Работает с загородной недвижимостью, коттеджами и земельными участками.",
-      phone: "+7 (917) 345-67-89",
-      email: "petrova@zhilfond-str.ru",
-      image: employee1
-    },
-    {
-      id: 4,
-      name: "Игорь Козлов",
-      position: "Риелтор",
-      experience: "8 лет опыта",
-      specialization: "Инвестиционная недвижимость",
-      description: "Консультирует по инвестиционным проектам и помогает выгодно вложить средства в недвижимость.",
-      phone: "+7 (917) 456-78-90",
-      email: "kozlov@zhilfond-str.ru",
-      image: employee1
+      experience: "3 лет опыта",
+    //   specialization: "Жилая недвижимость",
+      description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами в новостройках и на вторичном рынке.",
+      phone: "+7 (903) 312-44-09",
+      email: "gale_09@mail.ru",
+      image: employee3
     }
   ];
 

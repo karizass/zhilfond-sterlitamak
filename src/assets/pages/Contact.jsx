@@ -123,7 +123,7 @@ function Contacts() {
                     <div className="contact-item-content">
                         <h6>Email</h6>
                         <p className="p-16">
-                          <a href="mailto:shamilvildanov@mail.ru" className="contact-link">gale_09@mail.ru</a>
+                          <a href="mailto:gale_09@mail.ru" className="contact-link">gale_09@mail.ru</a>
                         </p>
                     </div>
                 </div>
