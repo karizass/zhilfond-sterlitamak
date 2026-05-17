@@ -9,7 +9,7 @@ function Footer() {
     <footer className="footer">
         <div className="footer-logo">
             <img src={footerLogo} alt="" />
-            <p className="p-desc-footer">Профессиональные услуги риелторов в <br /> Стерлитамаке</p>
+            <p className="p-desc-footer">Профессиональные услуги риелторов по <br /> Республике Башкортостан и России</p>
         </div>
         <div className="footer-nav">
             <p className="p-28">Навигация</p>

@@ -24,7 +24,7 @@ function Home() {
             <div className="home-banner-text">
                 <h1>Ваш надежный партнер в мире недвижимости</h1>
                 <p className="home-banner-text-description">Профессиональная команда риелторов с многолетним опытом 
-                работы на рынке недвижимости Стерлитамака. Мы помогаем находить идеальные решения для каждого клиента</p>
+                работы на рынке недвижимости по России. Мы помогаем находить идеальные решения для каждого клиента</p>
                 <div className="home-banner-text-buttons">
                     <Link to="/team" className="button-with-arrow">
                         Наша команда <img src={buttonArrow} alt="" />
