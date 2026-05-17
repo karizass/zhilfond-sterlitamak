@@ -8,7 +8,7 @@
 
 body {
   width: 100%;
-  max-width: $max-width;
+  max-width: 1440px;
   margin: 0 auto;
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
@@ -111,7 +111,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 }
 
 .btn-dark:hover {
-  background-color: darken($blue, 10%);
+  background-color: #0a0f1a;
 }
 
 .btn-phone {
@@ -131,7 +131,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 }
 
 .btn-phone:hover {
-  background-color: darken($blue, 10%);
+  background-color: #0a0f1a;
 }
 
 // Шапка
@@ -286,7 +286,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 .home-advantages {
   width: 100%;
   padding: 120px 20px;
-  background-color: $bg-light;
+  background-color: #F9FAFB;
   display: flex;
   gap: 250px;
   justify-content: center;
@@ -333,7 +333,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 }
 
 .home-chose {
-  background-color: $bg-light;
+  background-color: #F9FAFB;
   padding: 120px 20px 100px;
 }
 
@@ -428,7 +428,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 }
 
 .home-team .btn-white:hover {
-  background-color: darken($white, 5%);
+  background-color: #f5f5f5;
 }
 
 .home-consult {
@@ -508,7 +508,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 // Страница команды
 .employers {
   padding: 80px 20px 100px;
-  max-width: $max-width;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -667,7 +667,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 }
 
 .employers-cta {
-  background-color: $bg-light;
+  background-color: #F9FAFB;
   padding: 60px 40px;
   text-align: center;
   border-radius: 8px;
@@ -689,7 +689,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 // Страница услуг
 .services {
   padding: 80px 20px 100px;
-  max-width: $max-width;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -781,7 +781,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 
 // Блок процесса
 .services-process {
-  background-color: $bg-light;
+  background-color: #F9FAFB;
   padding: 80px 20px;
   text-align: center;
   margin: 0 -20px;
@@ -835,7 +835,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
   padding: 80px 40px;
   text-align: center;
   margin: 60px auto 0 auto;
-  background-color: $bg-light;
+  background-color: #F9FAFB;
   border-radius: 8px;
 }
 
@@ -852,7 +852,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 // Контакты
 .contacts {
   padding: 80px 20px 100px;
-  max-width: $max-width;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -891,7 +891,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 .contact-item-icon {
   width: 50px;
   height: 50px;
-  background-color: $bg-light;
+  background-color: #F9FAFB;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -925,7 +925,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 }
 
 .contacts-form-wrapper {
-  background-color: $bg-light;
+  background-color: #F9FAFB;
   border-radius: 8px;
   padding: 40px;
 }
@@ -989,7 +989,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 }
 
 .btn-submit:hover {
-  background-color: darken($blue, 10%);
+  background-color: #0a0f1a;
 }
 
 .form-privacy {
@@ -1025,7 +1025,7 @@ button:active, .btn-primary:active, .btn-white:active, .button-with-arrow:active
 }
 
 .contacts-cta {
-  background-color: $bg-light;
+  background-color: #F9FAFB;
   padding: 80px 40px;
   text-align: center;
   border-radius: 8px;
