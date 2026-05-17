@@ -1,9 +1,9 @@
 import React from "react";
 import '../scss/style.scss';
 
-import employee1 from '../img/team-employe1.webp';
-import employee2 from '../img/team-employe2.webp';
-import employee3 from '../img/team-employe3.webp';
+import employee1 from '../img/team-employee1.webp';
+import employee2 from '../img/team-employee2.webp';
+import employee3 from '../img/team-employee3.webp';
 import phoneIcon from '../img/team-page-phone-icon.webp';
 import emailIcon from '../img/team-page-email-icon.webp';
 import contactIcon from '../img/team-phone-icon.webp';
