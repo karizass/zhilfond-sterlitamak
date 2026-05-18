@@ -112,8 +112,8 @@ function Contacts() {
                     <div className="contact-item-content">
                         <h6>Телефон</h6>
                         <p className="p-16">
-                          <a href="tel:+79177308313" className="contact-link">+7 (905) 005-28-82</a><br />
-                          <a href="tel:+79174170210" className="contact-link">+7 (903) 312-44-09</a>
+                          <a href="tel:+79050052882" className="contact-link">+7 (905) 005-28-82</a><br />
+                          <a href="tel:+79033124409" className="contact-link">+7 (903) 312-44-09</a>
                         </p>
                     </div>
                 </div>
