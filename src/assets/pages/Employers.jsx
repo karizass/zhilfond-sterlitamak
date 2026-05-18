@@ -108,7 +108,7 @@ function Employers() {
         <div className="employers-cta">
             <h6>Не нашли подходящего специалиста?</h6>
             <p className="p-description">Свяжитесь с нами, и мы подберём риелтора под ваши конкретные потребности</p>
-            <a href="tel:+79177308313" className="btn-dark">
+            <a href="tel:+7905005282" className="btn-dark">
                 <img src={phoneIcon} alt="phone" />
                 Позвонить нам
             </a>
