@@ -21,8 +21,8 @@ function Footer() {
         <div className="footer-contact">
             <p className="p-28">Контакты</p>
             <p className="p-20">г. Стерлитамак, ул. Артема, д. 53, 2 этаж, 211 кабинет</p>
-            <a href="tel:+79050052882"><p className="p-20">+7 (905) 005 28 82</p></a>
-            <a href="mailto:gale_09@mail.ru"><p className="p-20">gale_09@mail.ru</p></a>
+            <a href="tel:+79050052882" className="contact-link"><p className="p-20">+7 (905) 005 28 82</p></a>
+            <a href="mailto:gale_09@mail.ru" className="contact-link"><p className="p-20">gale_09@mail.ru</p></a>
         </div>
     </footer>
   );

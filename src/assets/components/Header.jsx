@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from '../context/AuthContext';
 import '../scss/style.scss';
 
 import headerLogo from '../img/header-logo-icon.webp';
@@ -13,13 +14,13 @@ import closeIcon from '../img/close-icon.webp';
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
-  // Закрываем меню при смене маршрута
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
 
-  // Блокируем прокрутку фона при открытом меню
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -34,6 +35,11 @@ function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
+  const handleSignOut = async () => {
+    await signOut();
+    navigate('/');
+  };
+
   const getLinkClass = ({ isActive }) => 
     `header-nav-inner ${isActive ? 'active' : ''}`;
 
@@ -43,7 +49,6 @@ function Header() {
             <img src={headerLogo} alt="header-logo" />
         </div>
         
-        {/* Десктопное меню */}
         <nav className="header-nav header-nav-desktop">
             <NavLink to="/" className={getLinkClass}>
                 <img src={homeIcon} alt="home-icon" />
@@ -61,9 +66,23 @@ function Header() {
                 <img src={contactIcon} alt="contact-icon" />
                 <span className="p-16">Контакты</span>
             </NavLink>
+            
+            {user ? (
+              <button onClick={handleSignOut} className="btn-dark header-auth-btn">
+                Выйти
+              </button>
+            ) : (
+              <>
+                <NavLink to="/signin" className="btn-dark header-auth-btn">
+                  Войти
+                </NavLink>
+                <NavLink to="/signup" className="btn-primary header-auth-btn">
+                  Регистрация
+                </NavLink>
+              </>
+            )}
         </nav>
 
-        {/* Кнопка бургера для мобильных */}
         <button 
           className="header-burger" 
           onClick={toggleMenu}
@@ -73,7 +92,6 @@ function Header() {
           <img src={isMenuOpen ? closeIcon : burgerIcon} alt={isMenuOpen ? "Закрыть" : "Меню"} />
         </button>
 
-        {/* Мобильное меню (оверлей) */}
         <div className={`header-mobile-menu ${isMenuOpen ? 'open' : ''}`}>
             <nav className="header-nav header-nav-mobile">
                 <NavLink to="/" className={getLinkClass} onClick={closeMenu}>
@@ -92,10 +110,25 @@ function Header() {
                     <img src={contactIcon} alt="contact-icon" />
                     <span className="p-16">Контакты</span>
                 </NavLink>
+                
+                {user ? (
+                  <button onClick={() => { handleSignOut(); closeMenu(); }} 
+                    className="btn-dark header-auth-btn">
+                    Выйти
+                  </button>
+                ) : (
+                  <>
+                    <NavLink to="/signin" className="btn-dark header-auth-btn" onClick={closeMenu}>
+                      Войти
+                    </NavLink>
+                    <NavLink to="/signup" className="btn-primary header-auth-btn" onClick={closeMenu}>
+                      Регистрация
+                    </NavLink>
+                  </>
+                )}
             </nav>
         </div>
 
-        {/* Затемнение фона при открытом меню */}
         {isMenuOpen && (
           <div className="header-overlay" onClick={closeMenu}></div>
         )}
