@@ -8,7 +8,9 @@ function Signup() {
     fullName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    agreeNotifications: false,
+    agreeCall: false
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -16,7 +18,11 @@ function Signup() {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({ 
+      ...prev, 
+      [name]: type === 'checkbox' ? checked : value 
+    }));
     setError('');
   };
 
@@ -30,6 +36,11 @@ function Signup() {
     
     if (formData.password.length < 6) {
       setError('Пароль должен содержать минимум 6 символов');
+      return;
+    }
+
+    if (!formData.agreeNotifications || !formData.agreeCall) {
+      setError('Для завершения регистрации необходимо согласие с условиями');
       return;
     }
 
@@ -52,8 +63,8 @@ function Signup() {
       <div className="auth-container">
         <h6>Регистрация</h6>
         
-        {error && <div className="form-error">⚠ {error}</div>}
-        {success && <div className="form-success">✓ {success}</div>}
+        {error && <div className="form-error">{error}</div>}
+        {success && <div className="form-success">{success}</div>}
         
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
@@ -96,6 +107,33 @@ function Signup() {
               required 
             />
           </div>
+          
+          <div className="form-group form-checkbox">
+            <label className="checkbox-label">
+              <input 
+                type="checkbox" 
+                name="agreeNotifications"
+                checked={formData.agreeNotifications}
+                onChange={handleChange}
+                required
+              />
+              <span>Регистрируясь, вы подписываетесь на уведомления о новых предложениях и акциях агентства</span>
+            </label>
+          </div>
+          
+          <div className="form-group form-checkbox">
+            <label className="checkbox-label">
+              <input 
+                type="checkbox" 
+                name="agreeCall"
+                checked={formData.agreeCall}
+                onChange={handleChange}
+                required
+              />
+              <span>Я соглашаюсь на предварительный обзвон специалистом для уточнения пожеланий касаемо недвижимости</span>
+            </label>
+          </div>
+          
           <button type="submit" className="btn-submit">Зарегистрироваться</button>
         </form>
         

@@ -37,7 +37,7 @@ function Signin() {
       <div className="auth-container">
         <h6>Вход</h6>
         
-        {error && <div className="form-error">⚠ {error}</div>}
+        {error && <div className="form-error">{error}</div>}
         
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">

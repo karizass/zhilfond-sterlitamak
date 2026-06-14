@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from '../context/AuthContext';
 import '../scss/style.scss';
 
 import locationIcon from '../img/contact-locate-icon.webp';
@@ -8,10 +9,8 @@ import emailIcon from '../img/contact-email-icon.webp';
 import timeIcon from '../img/contact-clock-icon.webp';
 import buttonPhoneIcon from '../img/team-page-phone-icon.webp';
 
-// Ключ для localStorage
 const STORAGE_KEY = 'contactSubmissions';
 
-// Вспомогательная функция: получить все заявки
 export const getSubmissions = () => {
   try {
     const data = localStorage.getItem(STORAGE_KEY);
@@ -22,7 +21,6 @@ export const getSubmissions = () => {
   }
 };
 
-// Вспомогательная функция: очистить старые заявки (старше 30 дней)
 const cleanupOldSubmissions = (submissions, days = 30) => {
   const now = Date.now();
   const maxAge = days * 24 * 60 * 60 * 1000;
@@ -30,6 +28,7 @@ const cleanupOldSubmissions = (submissions, days = 30) => {
 };
 
 function Contacts() {
+  const { user } = useAuth();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -38,6 +37,15 @@ function Contacts() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (user?.user_metadata?.full_name) {
+      setFormData(prev => ({ ...prev, name: user.user_metadata.full_name }));
+    }
+    if (user?.email) {
+      setFormData(prev => ({ ...prev, email: user.email }));
+    }
+  }, [user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,35 +56,28 @@ function Contacts() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Простая валидация
     if (!formData.name.trim() || !formData.phone.trim() || !formData.message.trim()) {
       setError('Пожалуйста, заполните все обязательные поля');
       return;
     }
 
     try {
-      // Формируем объект заявки
       const submission = {
         id: Date.now(),
         ...formData,
+        userId: user?.id || null,
         timestamp: new Date().toISOString()
       };
 
-      // Получаем существующие заявки
       const existing = getSubmissions();
-      
-      // Очищаем старые записи и добавляем новую
       const updated = [...cleanupOldSubmissions(existing), submission];
       
-      // Сохраняем в localStorage
       localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
 
-      // Сброс формы и показ сообщения
-      setFormData({ name: '', phone: '', email: '', message: '' });
+      setFormData({ name: user?.user_metadata?.full_name || '', phone: '', email: user?.email || '', message: '' });
       setIsSubmitted(true);
       setError('');
 
-      // Скрыть сообщение через 5 секунд
       setTimeout(() => setIsSubmitted(false), 5000);
       
     } catch (err) {
@@ -84,9 +85,6 @@ function Contacts() {
       setError('Не удалось отправить сообщение. Попробуйте позже.');
     }
   };
-
-  // Очистка номера для tel: ссылки
-  const cleanPhone = (phone) => phone.replace(/[^0-9+]/g, '');
 
   return (
     <div className="contacts">
@@ -135,13 +133,13 @@ function Contacts() {
                     
                     {isSubmitted && (
                       <div className="form-success">
-                        ✓ Сообщение отправлено! Мы свяжемся с вами в ближайшее время.
+                        Сообщение отправлено! Мы свяжемся с вами в ближайшее время.
                       </div>
                     )}
                     
                     {error && (
                       <div className="form-error">
-                        ⚠ {error}
+                        {error}
                       </div>
                     )}
                     

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from '../context/AuthContext';
 import '../scss/style.scss';
 
 import employee1 from '../img/team-employee1.webp';
@@ -10,13 +12,14 @@ import emailIcon from '../img/team-page-email-icon.webp';
 import contactIcon from '../img/team-phone-icon.webp';
 
 function Employers() {
+  const { user } = useAuth();
+
   const employees = [
     {
       id: 1,
       name: "Юмагулова Гузель",
       position: "Директор",
       experience: "5 лет на рынке",
-    //   specialization: "Жилая недвижимость",
       description: "Директор-брокер, ведет юридическое сопровождение сделок.",
       phone: "+7 (905) 005-28-82",
       email: "gale_09@mail.ru",
@@ -27,7 +30,6 @@ function Employers() {
       name: "Шарипова Айгуль",
       position: "Риелтор",
       experience: "4 года на рынке",
-    //   specialization: "Жилая недвижимость",
       description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами и жилыми домами.",
       phone: "+7 (937) 162-59-83",
       email: "sharipova1212@icloud.com",
@@ -38,7 +40,6 @@ function Employers() {
       name: "Каримова Элиза",
       position: "Риелтор",
       experience: "3 года на рынке",
-    //   specialization: "Жилая недвижимость",
       description: "Специализируется на жилой и коммерческой недвижимости, работает с квартирами и жилыми домами.",
       phone: "+7 (903) 312-44-09",
       email: "Eliza-karimova@mail.ru",
@@ -49,7 +50,6 @@ function Employers() {
       name: "Даутов Рустам",
       position: "Застройщик",
       experience: "5 лет на рынке",
-    //   specialization: "Жилая недвижимость",
       description: "Партнерская строительная компания, специализирующаяся на жилых домах из СИП-панелей.",
       phone: "+7 (917) 377-78-50",
       email: "sip_home2@yandex.ru",
@@ -57,8 +57,20 @@ function Employers() {
     }
   ];
 
-  // Функция для очистки номера телефона (убираем пробелы, скобки, тире)
   const cleanPhone = (phone) => phone.replace(/[^0-9+]/g, '');
+
+  const ProtectedEmployeeContact = ({ type, value }) => {
+    if (!user) {
+      return <span className="contact-hidden">доступно после входа</span>;
+    }
+    if (type === 'phone') {
+      return <a href={`tel:${cleanPhone(value)}`} className="employee-contact-link">{value}</a>;
+    }
+    if (type === 'email') {
+      return <a href={`mailto:${value}`} className="employee-contact-link">{value}</a>;
+    }
+    return <span>{value}</span>;
+  };
 
   return (
     <div className="employers">
@@ -82,23 +94,19 @@ function Employers() {
                                 <span className="employee-info-label">Опыт:</span>
                                 <span className="employee-info-value">{employee.experience}</span>
                             </div>
-                            {/* <div className="employee-info-row">
-                                <span className="employee-info-label">Специализация:</span>
-                                <span className="employee-info-value">{employee.specialization}</span>
-                            </div> */}
                         </div>
 
                         <p className="employee-description">{employee.description}</p>
 
                         <div className="employee-contacts">
-                            <a href={`tel:${cleanPhone(employee.phone)}`} className="employee-contact-item">
+                            <div className="employee-contact-item">
                                 <img src={contactIcon} alt="phone" />
-                                <span>{employee.phone}</span>
-                            </a>
-                            <a href={`mailto:${employee.email}`} className="employee-contact-item">
+                                <ProtectedEmployeeContact type="phone" value={employee.phone} />
+                            </div>
+                            <div className="employee-contact-item">
                                 <img src={emailIcon} alt="email" />
-                                <span>{employee.email}</span>
-                            </a>
+                                <ProtectedEmployeeContact type="email" value={employee.email} />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,7 +116,7 @@ function Employers() {
         <div className="employers-cta">
             <h6>Не нашли подходящего специалиста?</h6>
             <p className="p-description">Свяжитесь с нами, и мы подберём риелтора под ваши конкретные потребности</p>
-            <a href="tel:+7905005282" className="btn-dark">
+            <a href="tel:+79050052882" className="btn-dark">
                 <img src={phoneIcon} alt="phone" />
                 Позвонить нам
             </a>
