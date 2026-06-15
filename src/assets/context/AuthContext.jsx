@@ -19,7 +19,6 @@ export const AuthProvider = ({ children }) => {
     
     checkUser();
 
-    // Слушаем изменения авторизации
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setUser(session?.user ?? null);
@@ -29,7 +28,6 @@ export const AuthProvider = ({ children }) => {
     return () => subscription.unsubscribe();
   }, []);
 
-  // Регистрация
   const signUp = async (email, password, fullName) => {
     const { data, error } = await supabase.auth.signUp({
       email,
@@ -39,7 +37,6 @@ export const AuthProvider = ({ children }) => {
     return { data, error };
   };
 
-  // Вход
   const signIn = async (email, password) => {
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
@@ -48,7 +45,6 @@ export const AuthProvider = ({ children }) => {
     return { data, error };
   };
 
-  // Выход
   const signOut = async () => {
     const { error } = await supabase.auth.signOut();
     return { error };
